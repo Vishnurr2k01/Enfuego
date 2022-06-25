@@ -27,7 +27,7 @@ const Pointtable = () => {
                     <div className=" col-span-1">Pts</div>
 
                 </div>
-                {table.map((data) => (
+                {table?.map((data) => (
                     <div className='grid grid-cols-8 mt-4 md:w-[50rem] border-b-2 pb-4'>
                         <div className="col-span-3 md:text-xl  font-semibold md:pl-12">
                             {data.team_id}
