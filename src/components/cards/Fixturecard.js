@@ -1,0 +1,30 @@
+import React from 'react'
+
+function formatDate (input) {
+    var datePart = input.match(/\d+/g),
+    year = datePart[0].substring(2), // get only two digits
+    month = datePart[1], day = datePart[2];
+  
+    return day+'/'+month+'/'+year;
+  }
+const Fixturecard = ({data}) => {
+    
+  return (
+    <div className="border-2 m-4 px-8 py-4 rounded" >
+    <h3 className='text-center text-2xl font-bold'>Match No : {data.matchnumber}</h3>
+    <div className="flex text-xl justify-between mt-4">
+   <div className="flex font-semibold">
+   <h2 className=''> {data.teama_id} </h2>
+    <h2 className='ml-12'> {data.finished? data.scorea : '-'} </h2>
+   </div>
+    <div className="flex font-semibold">
+   <h2 className='mr-12'>{data.finished? data.scoreb : '-'}</h2>
+    <h2 className=''>{data.teamb_id} </h2>
+   </div>
+    </div>
+    <h3 className='text-center text-xl  mt-4'>Date : <span className='font-semibold'> {formatDate(data.date)}</span> </h3>
+  </div>
+  )
+}
+
+export default Fixturecard
