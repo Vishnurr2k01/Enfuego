@@ -12,7 +12,7 @@ const fetchFixture = async()=>{
 }
 useEffect(()=>{
 fetchFixture()
-},[])
+},[fixtures])
 
   return (
     <div className='overflow-y-scroll'>
