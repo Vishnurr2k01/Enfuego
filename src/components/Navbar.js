@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   return (
-    <div className="flex fixed items-center justify-between border-b border-gray-400 py-4 px-4 mb-4 w-screen">
-      <a href="/" className='text-xl font-bold'>
+    <div className="flex  fixed items-center justify-between border-b border-gray-400 py-4 px-4 mb-4 w-screen">
+      <a href="/" className='text-xl font-bold text-white'>
         En Fuego
       </a>
       <nav>
@@ -21,14 +21,14 @@ const Navbar = () => {
 
           <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
             <div
-              className="absolute top-0 right-0 px-8 py-8"
+              className="absolute top-0 right-0 px-8 py-8 "
               onClick={() => setIsNavOpen(false)}
             >
               <svg
                 className="h-8 w-8 text-gray-600"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="currentColor"
+                stroke="white"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -54,7 +54,7 @@ const Navbar = () => {
           </div>
         </section>
 
-        <ul className="DESKTOP-MENU hidden space-x-8 px-8 text-xl font-semibold lg:flex">
+        <ul className="DESKTOP-MENU hidden space-x-8 px-8 text-xl font-semibold lg:flex text-white">
           <li>
             <Link to='/'> Point Table </Link>
           </li>
@@ -72,6 +72,7 @@ const Navbar = () => {
       <style>{`
     .hideMenuNav {
       display: none;
+      
     }
     .showMenuNav {
       display: block;
@@ -86,6 +87,9 @@ const Navbar = () => {
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
+      background-color : #37003C;
+      color : white;
+      font-size : 1.5rem
     }
   `}</style>
     </div>

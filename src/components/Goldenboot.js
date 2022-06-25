@@ -25,8 +25,9 @@ const Goldenboot = () => {
                     <img src={loadingimg} alt="" className='flex items-center justify-center w-[20rem]' />
 
                 </div>
-            </> : <div className='bg-yellow'>
-                <h3 className='text-center text-2xl font-bold mb-6'>Goal Scorers</h3>
+            </> : <>
+                <h3 className='text-center text-2xl font-bold mb-6 text-white'>Goal Scorers</h3>
+            <div className='card mx-4 md:mx-80'>
                 <div className='grid grid-cols-6 text-xl font-bold border-b-2 mx-4 mb-8 pb-4 border-black'>
                     <div className="col-span-3">Name</div>
                     <div className="col-span-2">Team</div>
@@ -40,8 +41,10 @@ const Goldenboot = () => {
                         <div className="col-span-1 text-center">{data.goalsscored}</div>
 
                     </div>
+                    
                 ))}
-            </div>}
+            </div>
+            </>}
 
         </div>
 

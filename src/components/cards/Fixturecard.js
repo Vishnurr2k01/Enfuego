@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../App.css'
 
 function formatDate (input) {
     var datePart = input.match(/\d+/g),
@@ -10,15 +11,15 @@ function formatDate (input) {
 const Fixturecard = ({data}) => {
     
   return (
-    <div className="border-2 m-4 px-8 py-4 rounded" >
-    <h3 className='text-center text-2xl font-bold'>Match No : {data.matchnumber}</h3>
-    <div className="flex text-xl justify-between mt-4">
-   <div className="flex font-semibold">
+    <div className="card border-2 m-4 px-8 py-2 rounded md:mx-52" >
+    <h3 className='text-center text-xl font-semibold'>Match No : {data.matchnumber}</h3>
+    <div className="flex text-2xl justify-between mt-4 px-4">
+   <div className="flex font-semibold ">
    <h2 className=''> {data.teama_id} </h2>
-    <h2 className='ml-12'> {data.finished? data.scorea : '-'} </h2>
+    <h2 className='ml-16'> {data.finished? data.scorea : '-'} </h2>
    </div>
-    <div className="flex font-semibold">
-   <h2 className='mr-12'>{data.finished? data.scoreb : '-'}</h2>
+    <div className="flex font-semibold ">
+   <h2 className='mr-16'>{data.finished? data.scoreb : '-'}</h2>
     <h2 className=''>{data.teamb_id} </h2>
    </div>
     </div>

@@ -14,21 +14,22 @@ const Rules = () => {
     }).catch((err) => console.log(err))
   }, [])
   return (
-    <div>
+    <div className='md:flex flex-col justify-center items-center'>
     {loading?<>
       <div className="flex justify-center">
                     <img src={loadingimg} alt="" className='flex items-center justify-center w-[20rem]' />
 
                 </div>
     </>:<>
-    <h3 className='text-center text-2xl font-bold mb-6'>Guidelines</h3>
+    <h3 className='text-center text-2xl font-bold mb-6 text-white'>Guidelines</h3>
      
-     
+     <div className="card mx-4 md:w-[40rem]">
      {rules.map((data,key)=>(
        <div key={key} className="mx-4 text-xl mt-2">
          <li> {data.rule} </li>
        </div>
      ))}
+     </div>
     </>}
     </div>
   )

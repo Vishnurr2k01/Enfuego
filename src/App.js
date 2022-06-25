@@ -7,23 +7,27 @@ import Goldenboot from './components/Goldenboot';
 import Navbar from './components/Navbar';
 import { Route, Routes } from 'react-router-dom'
 import Rules from './components/Rules';
+import bg from './assets/bg.png'
 
 function App() {
   return (
-    <div className="App overflow-y-scroll">
-    <Navbar />
-    <div className="mt-24">
-    <Routes >
-      <Route path='/' element={<Pointtable/>} />
-      <Route path='/fixtures' element={<Fixtures/>} />
-      <Route path='/goldenboot' element={<Goldenboot/>} />
-      <Route path='/rules' element={<Rules/>} />
+    <div  style={{
+      backgroundImage: `url(${bg})`
 
-    </Routes>
+    }}  className="overflow-y-scroll h-screen w-screen">
+      <Navbar />
+      <div className="mt-24">
+        <Routes >
+          <Route path='/' element={<Pointtable />} />
+          <Route path='/fixtures' element={<Fixtures />} />
+          <Route path='/goldenboot' element={<Goldenboot />} />
+          <Route path='/rules' element={<Rules />} />
 
-     
-    </div>
-     
+        </Routes>
+
+
+      </div>
+
     </div>
   );
 }

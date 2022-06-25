@@ -2,7 +2,8 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import loadingimg from '../assets/loading.gif'
 import Fixturecard from './cards/Fixturecard'
-
+import bg from '../assets/bg.png'
+import '../App.css'
 const Pointtable = () => {
     const [table, setTable] = useState([])
     const [loading, setLoading] = useState(true)
@@ -47,7 +48,7 @@ const Pointtable = () => {
     //     fixtureSpecific(team)
     // }, [team])
     return (
-        <div className="md:flex items-center justify-center mx-8">
+        <div className="card md:flex items-center justify-center mx-4 md:mx-52">
             {loading ? <>
                 <div className="flex justify-center">
                     <img src={loadingimg} alt="" className='flex items-center justify-center w-[20rem]' />
@@ -55,7 +56,7 @@ const Pointtable = () => {
                 </div>
             </> : <>
                 <div className=''>
-                <h3 className='text-center text-2xl font-bold mb-6'>League Standings</h3>
+                    <h3 className='text-center text-2xl font-bold mb-6'>League Standings</h3>
                     <div className='grid grid-cols-8 mb-8  md:text-xl font-bold xs:w-screen md:w-[50rem] border-b-2 border-black pb-4'>
                         <div className="col-span-2 md:pl-16 ">
                             Team
@@ -70,11 +71,11 @@ const Pointtable = () => {
                     </div>
                     {table?.map((data) => (
                         <div className='grid grid-cols-8 mt-4 md:w-[50rem] border-b-2 pb-4'>
-                            <div  className="col-span-2 md:text-xl font-semibold md:pl-12">
+                            <div className="col-span-2 md:text-xl font-semibold md:pl-12">
                                 {data.team_id}
                             </div>
                             <div className=" col-span-1 ">{data.gamesplayed}</div>
-                            
+
                             <div className=" col-span-1">{data.gameswon}</div>
                             <div className=" col-span-1 ">{data.gameslost}</div>
                             <div className=" col-span-1">{data.goaldifference}</div>
@@ -84,11 +85,20 @@ const Pointtable = () => {
                         </div>
 
                     ))}
+                    <p className='mt-8 text-center'>
+                        M : Matches &nbsp;&nbsp;
+                        W : Wins &nbsp;&nbsp;
+                        L : Loses &nbsp;&nbsp;
+                        GD : Goal Difference &nbsp;&nbsp;
+                        GS : Goal Scored &nbsp;&nbsp;
+                        Pts : Points
+                    </p>
                 </div>
             </>}
 
         </div>
     )
 }
+
 
 export default Pointtable
