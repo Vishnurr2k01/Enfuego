@@ -6,6 +6,7 @@ import Fixtures from './components/Fixtures';
 import Goldenboot from './components/Goldenboot';
 import Navbar from './components/Navbar';
 import { Route, Routes } from 'react-router-dom'
+import Rules from './components/Rules';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route path='/' element={<Pointtable/>} />
       <Route path='/fixtures' element={<Fixtures/>} />
       <Route path='/goldenboot' element={<Goldenboot/>} />
+      <Route path='/rules' element={<Rules/>} />
 
     </Routes>
 
