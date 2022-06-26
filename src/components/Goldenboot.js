@@ -9,7 +9,7 @@ const Goldenboot = () => {
     const [loading, setLoading] = useState(true)
     const fetchGoals = async () => {
         const response = await axios.get('https://enfuego.herokuapp.com/goalscorers')
-        console.log(response.data);
+        
         setGoalScorers(response.data)
         setLoading(false)
     }

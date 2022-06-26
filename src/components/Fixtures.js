@@ -9,7 +9,7 @@ const Fixtures = () => {
   const fetchFixture = async () => {
     const response = await axios.get('https://enfuego.herokuapp.com/completefixtures')
     setFixtures(response.data)
-    console.log(response.data)
+    
     setLoading(false)
   }
   useEffect(() => {

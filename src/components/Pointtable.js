@@ -14,7 +14,7 @@ const Pointtable = () => {
         const response = await axios.get('https://enfuego.herokuapp.com/pointtable')
         setTable(response.data)
         setLoading(false)
-        console.log(response.data);
+       
     }
     useEffect(() => {
         fetchTable()
@@ -48,7 +48,7 @@ const Pointtable = () => {
     //     fixtureSpecific(team)
     // }, [team])
     return (
-        <div className="card  md:flex items-center justify-center mx-4 lg:mx-52">
+        <div className="  md:flex items-center justify-center mx-4 lg:mx-52">
             {loading ? <>
                 <div className="flex justify-center">
                     <img src={loadingimg} alt="" className='flex items-center justify-center w-[20rem]' />
@@ -56,7 +56,8 @@ const Pointtable = () => {
                 </div>
             </> : <>
                 <div className=''>
-                    <h3 className='text-center font-headers text-2xl font-bold mb-6'>League Standings</h3>
+                    <h3 className='text-center font-headers text-2xl text-white font-bold mb-6'>League Standings</h3>
+                    <div className="card">
                     <div className='grid grid-cols-9 mb-8 font-content  md:text-xl font-bold xs:w-screen md:w-[50rem] border-b-2 border-black pb-4'>
                         <div className="col-span-2 md:pl-16 ">
                             Team
@@ -91,10 +92,12 @@ const Pointtable = () => {
                         M : Matches &nbsp;&nbsp;
                         W : Wins &nbsp;&nbsp;
                         L : Loses &nbsp;&nbsp;
+                        D : Draws &nbsp;&nbsp;
                         GD : Goal Difference &nbsp;&nbsp;
                         GS : Goal Scored &nbsp;&nbsp;
                         Pts : Points
                     </p>
+                    </div>
                 </div>
             </>}
 

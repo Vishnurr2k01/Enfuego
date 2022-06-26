@@ -9,7 +9,7 @@ const Rules = () => {
   useEffect(() => {
     axios.get('https://enfuego.herokuapp.com/guidelines').then((res) => {
       setRules(res.data)
-      console.log(res.data)
+
       setLoading(false)
     }).catch((err) => console.log(err))
   }, [])
