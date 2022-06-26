@@ -24,7 +24,7 @@ const Fixtures = () => {
           
         </div>
       </> : <>
-      <h3 className='text-center text-2xl font-bold mb-6 text-white'>Fixtures</h3>
+      <h3 className='text-center text-2xl font-bold mb-6 font-headers text-white'>Fixtures</h3>
       
         {fixtures?.map((data, key) => (
           <Fixturecard data={data} />

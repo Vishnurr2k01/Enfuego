@@ -11,7 +11,7 @@ function formatDate (input) {
 const Fixturecard = ({data}) => {
     
   return (
-    <div className="card border-2 m-4 px-8 py-2 rounded md:mx-52" >
+    <div className="card font-content border-2 m-4 px-8 py-2 rounded lg:mx-52" >
     <h3 className='text-center text-xl font-semibold'>Match No : {data.matchnumber}</h3>
     <div className="flex text-2xl justify-between mt-4 px-4">
    <div className="flex font-semibold ">

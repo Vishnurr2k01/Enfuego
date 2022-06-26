@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   return (
-    <div className="flex  fixed items-center justify-between border-b border-gray-400 py-4 px-4 mb-4 w-screen">
-      <a href="/" className='text-xl font-bold text-white'>
+    <div className="flex  fixed items-center justify-between border-b border-gray-400 py-4 px-4 mb-4 w-screen bg-[#37003c]">
+      <a href="/" className='text-2xl font-heading font-bold text-white'>
         En Fuego
       </a>
       <nav>

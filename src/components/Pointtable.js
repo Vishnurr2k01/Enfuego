@@ -48,7 +48,7 @@ const Pointtable = () => {
     //     fixtureSpecific(team)
     // }, [team])
     return (
-        <div className="card md:flex items-center justify-center mx-4 md:mx-52">
+        <div className="card  md:flex items-center justify-center mx-4 lg:mx-52">
             {loading ? <>
                 <div className="flex justify-center">
                     <img src={loadingimg} alt="" className='flex items-center justify-center w-[20rem]' />
@@ -56,21 +56,22 @@ const Pointtable = () => {
                 </div>
             </> : <>
                 <div className=''>
-                    <h3 className='text-center text-2xl font-bold mb-6'>League Standings</h3>
-                    <div className='grid grid-cols-8 mb-8  md:text-xl font-bold xs:w-screen md:w-[50rem] border-b-2 border-black pb-4'>
+                    <h3 className='text-center font-headers text-2xl font-bold mb-6'>League Standings</h3>
+                    <div className='grid grid-cols-9 mb-8 font-content  md:text-xl font-bold xs:w-screen md:w-[50rem] border-b-2 border-black pb-4'>
                         <div className="col-span-2 md:pl-16 ">
                             Team
                         </div>
                         <div className=" col-span-1">M</div>
                         <div className=" col-span-1">W</div>
                         <div className=" col-span-1">L</div>
-                        <div className=" col-span-1">GD</div>
+                        <div className=" col-span-1">D</div>
                         <div className=" col-span-1">GS</div>
+                        <div className=" col-span-1">GD</div>
                         <div className=" col-span-1">Pts</div>
 
                     </div>
                     {table?.map((data) => (
-                        <div className='grid grid-cols-8 mt-4 md:w-[50rem] border-b-2 pb-4'>
+                        <div className='grid font-content grid-cols-9 mt-4 md:w-[50rem] border-b-2 pb-4'>
                             <div className="col-span-2 md:text-xl font-semibold md:pl-12">
                                 {data.team_id}
                             </div>
@@ -78,8 +79,9 @@ const Pointtable = () => {
 
                             <div className=" col-span-1">{data.gameswon}</div>
                             <div className=" col-span-1 ">{data.gameslost}</div>
-                            <div className=" col-span-1">{data.goaldifference}</div>
+                            <div className=" col-span-1 ">{data.gamesdraw}</div>
                             <div className=" col-span-1">{data.goalsscored}</div>
+                            <div className=" col-span-1">{data.goaldifference}</div>
                             <div className=" col-span-1">{data.points}</div>
 
                         </div>
